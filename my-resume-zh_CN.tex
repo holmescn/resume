@@ -25,35 +25,48 @@
 \textit{学士}\ 应用物理
 
 \section{\faUsers\ 项目经历}
-\datedsubsection{\textbf{Ventelella}}{2018年2月 -- 至今}
-\role{CSS}{个人项目}
+\datedsubsection{\textbf{FFTNet-CUDA}}{2018年8月1晶 -- 2018年8月11日}
+\role{CUDA/cuDNN}{实验项目}
 \begin{onehalfspacing}
-基于 Bootstrap 4 的后台 UI 模板。https://github.com/holmescn/ventelella
+基于 CUDA/cuDNN 完成的 FFTNet Forward pass 开发。
 \begin{itemize}
-  \item 使用 webpack 对 JS, CSS 文件编译
-  \item 使用 PixelZero 辅助开发
+  \item 使用 C++ RAII  机制封装了 cudnnHandle\_t、cudnn*Descriptor\_t，实现资源生命周期的自动管理
+  \item 实现了一套 Exception 处理机制，方便进行调试
+  \item 实现了一个多维数组的简单封装，完成数据的填充和内存管理
+  \item 使用了「测试驱动开发」的方式，极大的减少了开发的时间
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{PixelZero}}{2018年1月 -- 至今}
-\role{JavsScript}{个人项目}
+\datedsubsection{\textbf{vDNN}}{2018年6月 -- 2018年7月}
+\role{Tensorflow}{个人项目}
 \begin{onehalfspacing}
-CSS 开发工具，开发中。https://github.com/holmescn/PixelZero
+参考 vDNN/moDNN 和阿里在 NIPS 2017 Workshop 上的一篇论文，实现了一个在小内存下训练大网络的技术原型。
 \begin{itemize}
-  \item 使用 webpack 对 JS, CSS 文件编译
-  \item 使用 peppeteer 控制 Chrome 对页面进行截图
-  \item 使用 resemble.js 对比，显示开发中的页面与参考页面的差异。
+  \item 通过使用 Tensorflow 的内部 API，切断了 forward pass 中的 tensor 与 gradients 的连接
+  \item 使用 tf.identity 把中间结果转移到 host 内存
+  \item 结果：成功将部分 tensor 转移到了 host，但并没有明显提高 batch 的大小
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{VSCode WordCount CJK}}{2017年5月 -- 至今}
-\role{TypeScript}{个人项目}
+\datedsubsection{\textbf{K 线形态识别}}{2018年3月 -- 2018年7月}
+\role{Tensorflow}{个人项目}
 \begin{onehalfspacing}
-VSCode 中文字数统计扩展, https://github.com/holmescn/vscode-wordcount-cjk
+使用图像分类技术，实现对 K 线形态的识别，进而为交易提供参考信息。
 \begin{itemize}
-  \item 实现了多种统计数据
-  \item 支持配置显示格式
-  \item 支持显示格式中的计算
+  \item 基于 VGG-16/ResNet/MobileNet/MobileNet v2/ShuffleNet 等 2016 年以后发表的模型
+  \item 使用 2016 年至今的现实数据生成 K 线图片
+  \item 结果：准确率达到了 65 \% 以上
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{StockGame}}{2018年7月 -- 2018年7月}
+\role{PyTorch}{个人项目}
+\begin{onehalfspacing}
+参考 OpenAI/Gym Game 的规范，构建的一个股票交易游戏。实现训练一个基于强化学习的股票交易员。
+\begin{itemize}
+  \item 基于 PyTorch 的 Actor-Critic 模型
+  \item 创建了一个股票交易的模拟环境，包括：交易策略、游戏状态空间和回报函数
+  \item 结果：在单支股票上的平均收益可以达到 20 \% 以上
 \end{itemize}
 \end{onehalfspacing}
 
@@ -97,14 +110,17 @@ VSCode 中文字数统计扩展, https://github.com/holmescn/vscode-wordcount-cj
   \item 地面数据系统处理架构设计
 \end{itemize}
 
-\section{\faCogs\ IT 技能}
+\section{\faCogs\ IT 技能和评级}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: PHP -> Competent
-  \item 编程语言: Python -> Advanced beginner
-  \item 编程语言: JavaScript -> Competent
   \item 编程语言: C/C++ -> Competent
+  \item 编程语言: Python -> Competent
+  \item 编程语言: PHP -> Competent
+  \item 编程语言: JavaScript -> Advanced Beginner
   \item 编程语言: CSS/HTML -> Advanced beginner
+  \item 框架: Tensorflow -> Advanced beginner
+  \item 框架: PyTorch -> Advanced beginner
+  \item 框架: CUDA/cuDNN -> Advanced beginner
   \item 平台: Linux
 \end{itemize}
 
