@@ -25,7 +25,20 @@
 \textit{学士}\ 应用物理
 
 \section{\faUsers\ 项目经历}
-\datedsubsection{\textbf{FFTNet-CUDA}}{2018年8月1晶 -- 2018年8月11日}
+\datedsubsection{\textbf{FFTNet-CUDA}}{2018年8月 -- 至今}
+\role{CUDA/cuDNN}{实验项目}
+\begin{onehalfspacing}
+基于 CUDA/cuDNN 和 OpenCV 的深度学习框架，目标是提供内存优化和方便的 Python 转 C++ 开发，
+以提供更好的产生部属性能。
+\begin{itemize}
+  \item 使用 C++ RAII  机制封装了 cudnnHandle\_t、cudnn*Descriptor\_t，实现资源生命周期的自动管理
+  \item 实现了一套 Exception 处理机制，方便进行调试
+  \item 实现了一个多维数组的简单封装，完成数据的填充和内存管理
+  \item 使用了「测试驱动开发」的方式，极大的减少了开发的时间
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{FFTNet-CUDA}}{2018年8月1日 -- 2018年8月11日}
 \role{CUDA/cuDNN}{实验项目}
 \begin{onehalfspacing}
 基于 CUDA/cuDNN 完成的 FFTNet Forward pass 开发。
