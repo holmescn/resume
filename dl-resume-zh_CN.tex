@@ -25,11 +25,11 @@
 \textit{学士}\ 应用物理
 
 \section{\faUsers\ 项目经历}
-\datedsubsection{\textbf{FFTNet-CUDA}}{2018年8月 -- 至今}
+\datedsubsection{\textbf{C++ 深度学习框架}}{2018年8月 -- 至今}
 \role{CUDA/cuDNN}{实验项目}
 \begin{onehalfspacing}
-基于 CUDA/cuDNN 和 OpenCV 的深度学习框架，目标是提供内存优化和方便的 Python 转 C++ 开发，
-以提供更好的产生部属性能。
+基于 CUDA/cuDNN 和 OpenCV 的深度学习框架，目标：1. 优化内存使用；2. 封装底层接口，自动化资源管理；3. 易于实现 Python
+代码向 C++ 代码的转换。
 \begin{itemize}
   \item 使用 C++ RAII  机制封装了 cudnnHandle\_t、cudnn*Descriptor\_t，实现资源生命周期的自动管理
   \item 实现了一套 Exception 处理机制，方便进行调试
